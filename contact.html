@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i|Work+Sans:300,400,500,600,700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>COVID 19</title>
+  </head>
+
+
+  <body onload="displayData()">
+
+
+    <header id="header">
+
+    	<nav id="menu" class="navmenu">
+    			<i class="fa fa-bars icon" aria-hidden="true" onclick="responsive()" style="font-size: 25px;"></i>
+    			<span><br><br><br></span>
+    			<a href="" onclick="responsive()">COVID - 19</a>
+          <a href="about.html" onclick="responsive()">About Covid-19</a>
+          <a href="faq.html" onclick="responsive()">FAQ</a>
+          <a href="contact.html" onclick="responsive()">Contact us</a>
+
+    	</nav>
+    	<script type="text/javascript">
+    		function responsive() {
+    			var dropdown = document.getElementById("menu");
+    			var header = document.getElementById("header");
+    			if (dropdown.className == "navmenu") {
+    				dropdown.className = "showmenu";
+    				header.className = "header_show";
+
+    			}
+    			else {
+    				dropdown.className = "navmenu";
+    				header.className = "";
+    			}
+
+    		}
+    	</script>
+    </header>
+
+    <div class="contactus">
+      <h1>Contact Us</h1>
+      <form>
+        <label>First Name: <span>*</span></label><br><br>
+        <input type="text" name="" value="" required><br>
+        <label>Last Name: <span>*</span></label><br><br>
+        <input type="text" name="" value="" required><br>
+        <label>Email: <span>*</span></label><br><br>
+        <input type="email" name="" value="" required><br>
+        <label>Contact Number: <span>*</span></label><br><br>
+        <input type="number" name="" value="" required><br><br>
+        <textarea name="name" rows=5 cols="100" placeholder="Enter your message"></textarea><br><br>
+        <input type="submit" name="" value="Submit"></input><br><br><br>
+      </form>
+    </div>
+
+
+<footer>
+  <div class="footer_below">
+  	<p>Copyright &copy; Covid - 19</p>
+  </div>
+
+</footer>
+
+
+  </body>
+
+
+</html>

@@ -1,0 +1,12 @@
+.about {
+  width: 60%;
+  margin-left: 20%;
+  padding-top: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    width: 90%;
+    margin-left: 5%;
+  }
+}

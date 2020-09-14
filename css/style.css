@@ -246,6 +246,14 @@ header nav {
 	margin-left: 25%;
 	margin-top: 50px;
 	float: left;
+	padding-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+	.tracker {
+		width: 100%;
+		margin-left: 0;
+	}
 }
 
 .tracker .heading {
@@ -304,73 +312,39 @@ header nav {
 		text-align: center;
 }
 
-.confirmedCol {
+.precautions {
+	width: 60%;
+	margin-left: 20%;
+	text-align: center;
+	align-items: center;
+	padding-bottom: 50px;
 }
 
-.activeCol {
-}
-
-.recoveredCol {
-}
-
-.deceasedCol {
-}
-
-
-footer  {
-	width: 100%;
-	overflow: auto;
-	color: snow;
-	background-color: rgb(18,19,21);
-	padding-top: 15px;
-	padding-bottom: 15px;
-}
-
-.fa-facebook {
-	padding: 10px 14px;
-}
-.fa-facebook:hover {
-    background-color: #3d5b99;
-}
-
-.fa-instagram {
-	padding: 10px 14px;
-}
-.fa-instagram hover {
-	font-size: 100px;
-}
-
-.fa-google-plus {
-    padding:10px 9px;
-}
-.fa-google-plus:hover {
-    background-color: #e25714;
-}
-
-.footer_div {
-	float: left;
+.precautions img {
 	width: 30%;
-	margin-left: 3%;
-}
-
-.map {
-	width: 80%;
-	height: 200px;
-	background: #fff;
+	height: auto;
+	margin-left: 2%;
 }
 
 @media screen and (max-width: 768px) {
-	.map {
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;
-	}
-	.footer_div {
-		text-align: center;
+	.precautions {
 		width: 100%;
-		margin-left: 0px;
+		margin-left: 0;
+	}
+	.precautions img {
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 0%;
 	}
 }
+
+.precautions a{
+	text-decoration: none;
+	color: #000;
+	font-size: 30px;
+}
+
+
 
 .footer_below {
 	padding-top: 15px;
