@@ -11,7 +11,7 @@
   </head>
 
 
-  <body>
+  <body onload="displayData()">
 
 
     <header id="header">
@@ -69,19 +69,19 @@
     <div class="cases">
       <div class="confirmed box">
         <p class="heading">Confirmed</p>
-        <p class="numbers">4000000</p>
+        <p class="numbers" id="confirmed">4000000</p>
       </div>
       <div class="active box">
         <p class="heading">Active</p>
-        <p class="numbers">4000000</p>
+        <p class="numbers" id="active">4000000</p>
       </div>
       <div class="recovered box">
         <p class="heading">Recovered</p>
-        <p class="numbers">4000000</p>
+        <p class="numbers" id="recovered">4000000</p>
       </div>
       <div class="deceased box">
         <p class="heading">Deceased</p>
-        <p class="numbers">4000000</p>
+        <p class="numbers" id="deceased">4000000</p>
       </div>
     </div>
 
@@ -89,13 +89,71 @@
       <div class="stateHead heading">
         <p>State/UT</p>
       </div>
-      <div class="confirmedHead heading"></div>
-      <div class="activeHead heading"></div>
-      <div class="recoveredHead heading"></div>
-      <div class="deceasedHead heading"></div>
-      <div class="testedHead heading"></div>
+      <div class="confirmedHead heading">
+        <p>Confirmed</p>
+      </div>
+      <div class="activeHead heading">
+        <p>Active</p>
+      </div>
+      <div class="recoveredHead heading">
+        <p>Recovered</p>
+      </div>
+      <div class="deceasedHead heading">
+        <p>Deceased</p>
+      </div>
+
+      <table class="table" id="table">
+        <tr>
+          <td class="stateCol" id="stateCol"></td>
+          <td class="confirmedCol dataCol" id="confirmedCol"></td>
+          <td class="activeCol dataCol" id="activeCol"></td>
+          <td class="recoveredCol dataCol" id="recoveredCol"></td>
+          <td class="deceasedCol dataCol" id="deceasedCol"></td>
+        </tr>
+      </table>
     </div>
 
+    <script>
+      function displayData() {
+        var table = document.getElementById("table");
+        fetch("https://api.covid19india.org/data.json").then(resp=>resp.json()).
+        then(data=>{
+        let ans=data.statewise;
+        var n = ans.length;
+        var confirmed = document.getElementById("confirmed");
+        var active = document.getElementById("active");
+        var recovered = document.getElementById("recovered");
+        var deceased = document.getElementById("deceased");
+        confirmed.innerHTML = ans[0].confirmed;
+        active.innerHTML = ans[0].active;
+        recovered.innerHTML = ans[0].recovered;
+        deceased.innerHTML = ans[0].deaths;
+        for(i=1;i<n;i++) {
+          var row = table.insertRow(i);
+          var state = row.insertCell(0);
+          var confirmed = row.insertCell(1);
+          var active = row.insertCell(2);
+          var recovered = row.insertCell(3);
+          var deceased = row.insertCell(4);
+          state.style.background = "#f6f5f7";
+          if(i%2!=0) {
+            confirmed.style.background = "#f6f5f7";
+            active.style.background = "#f6f5f7";
+            recovered.style.background = "#f6f5f7";
+            deceased.style.background = "#f6f5f7";
+          }
+          state.innerHTML =  ans[i].state;
+          confirmed.innerHTML = ans[i].confirmed;
+          active.innerHTML = ans[i].active;
+          recovered.innerHTML = ans[i].recovered;
+          deceased.innerHTML = ans[i].deaths;
+        }
+        console.log(ans);
+            }).catch((err)=>{
+                console.log(err);
+            });
+      }
+    </script>
 
     <footer>
 

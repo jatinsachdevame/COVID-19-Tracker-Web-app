@@ -243,22 +243,81 @@ header nav {
 .tracker {
 	width: 50%;
 	margin: auto;
-	margin-top: 300px;
+	margin-left: 25%;
+	margin-top: 50px;
+	float: left;
 }
 
 .tracker .heading {
 	color: #727c83;
 	background: #f6f5f7;
 	font-weight: bold;
+	float: left;
+	margin-left: 1%;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.heading p {
+	font-size: 15px;
 }
 
 .tracker .heading:hover {
 	background: #ecedef;
 }
 
+.stateHead {
+	width: 31%;
+}
+
+.confirmedHead {
+	width: 16%;
+}
+
+
+.activeHead {
+	width: 16%;
+}
+
+.recoveredHead {
+	width: 16%;
+}
+
+.deceasedHead {
+	width: 16%;
+}
+
+.table {
+	width: 100%;
+}
+
+.table tr:hover {
+	background: #ecedef;
+}
+
+.stateCol {
+	width: 31%;
+}
+
+.dataCol {
+		width: 16%;
+		text-align: center;
+}
+
+.confirmedCol {
+}
+
+.activeCol {
+}
+
+.recoveredCol {
+}
+
+.deceasedCol {
+}
+
 
 footer  {
-	margin-top: 350px;
 	width: 100%;
 	overflow: auto;
 	color: snow;

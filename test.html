@@ -1,0 +1,14 @@
+<html>
+    <body>
+
+    </body>
+<script>
+    fetch("https://api.covid19india.org/data.json").then(resp=>resp.json()).
+    then(data=>{
+let ans=data.statewise;
+console.log(ans);
+    }).catch((err)=>{
+        console.log(err);
+    });
+</script>
+</html>
