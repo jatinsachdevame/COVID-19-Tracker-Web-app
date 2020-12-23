@@ -5,3 +5,5 @@
 
 Api used for number of cases : https://api.covid19india.org/data.json
 About and FAQ source: WHO
+
+Link to the live website: https://jatinsachdeva.me/COVID-19-Tracker-Web-app/
